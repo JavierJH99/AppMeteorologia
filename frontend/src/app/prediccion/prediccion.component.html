@@ -1,0 +1,19 @@
+<h1>{{prediccion.municipio}}</h1>
+<h4>{{prediccion.fecha}}</h4>
+<h1>{{prediccion.temperaturaMedia}}ºC</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th *ngFor="let probabilidad of prediccion.probPrecipitacion">
+                {{probabilidad.value}}%
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td *ngFor="let probabilidad of prediccion.probPrecipitacion" >
+                {{probabilidad.periodo}}
+            </td>
+        </tr>
+    </tbody>
+</table>
